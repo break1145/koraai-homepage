@@ -9,7 +9,7 @@ const Home = () => {
 
         {/* Main Content */}
 
-        <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center mt-12">
+        <div className="container mx-auto flex gap-8 items-center mt-12">
           <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -24,6 +24,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              className="flex-1 max-w-[55%]"
           >
             <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               Smarter Teams.
@@ -61,7 +62,9 @@ const Home = () => {
           </motion.div>
 
           {/* Chat Interface */}
-          <ChatInterface />
+          <div className="w-[45%] flex justify-end">
+            <ChatInterface />
+          </div>
         </div>
       </div>
   )
