@@ -33,7 +33,7 @@ const ChatInterface = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-lg ml-auto overflow-hidden border border-white/20"
+          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-lg ml-auto overflow-hidden"
       >
         {/* 光泽反射特效 */}
         <div className="absolute inset-0 pointer-events-none">

@@ -10,31 +10,35 @@ const Home = () => {
         {/* Main Content */}
 
         <div className="container mx-auto flex gap-8 items-center mt-12">
-          <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute top-4 left-4 sm:left-4 left-1/2 sm:translate-x-0 -translate-x-1/2 z-50"
-          >
-            <div className="text-[#0066FF] text-2xl sm:text-3xl font-bold transition-all hover:opacity-80">
-              Kora
-            </div>
-          </motion.div>
+          {/* Left Side Content */}
           <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex-1 max-w-[55%]"
+              className="flex-1 p-20 rounded-2xl backdrop-blur-sm bg-white/10"
           >
-            <h2 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+              <div className="text-[#0066FF] text-4xl sm:text-3xl font-bold transition-all hover:opacity-80">
+                Kora
+              </div>
+            </motion.div>
+
+            {/* Content */} 
+            <h2 className="text-4xl sm:text-7xl font-bold text-gray-900 mb-4 leading-tight">
               Smarter Teams.
               <br />
               Smarter Work.
             </h2>
             <div className="flex items-center gap-2 mb-6">
-              <span className="text-gray-400 text-3xl sm:text-4xl">—</span>
-              <span className="text-gray-400 text-3xl sm:text-4xl">with</span>
-              <span className="text-[#0066FF] text-3xl sm:text-4xl font-bold">Kora AI</span>
+              <span className="text-[#0066FF] text-3xl sm:text-6xl">—</span>
+              <span className="text-[#0066FF] text-3xl sm:text-6xl">with</span>
+              <span className="text-[#0066FF] text-3xl sm:text-6xl font-bold">Kora AI</span>
             </div>
             <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-xl">
               Kora is the AI-native talent platform — connecting top talent with the
@@ -62,8 +66,10 @@ const Home = () => {
           </motion.div>
 
           {/* Chat Interface */}
-          <div className="w-[45%] flex justify-end">
-            <ChatInterface />
+          <div className="flex justify-end">
+            <div className="rounded-2xl backdrop-blur-sm bg-white/10 p-4">
+              <ChatInterface />
+            </div>
           </div>
         </div>
       </div>

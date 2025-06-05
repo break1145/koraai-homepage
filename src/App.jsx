@@ -4,6 +4,7 @@ import AiJob from './components/AiJob.jsx'
 import Community from './components/Community.jsx'
 import HireFeatures from './components/HireFeatures.jsx'
 import HumanData from './components/HumanData.jsx'
+import IconShowcase from './components/IconShowcase.jsx'
 import Footer from './components/Footer'
 
 import './App.css'
@@ -16,6 +17,7 @@ function App() {
         <Community/>
         <HireFeatures/>
         <HumanData/>
+        <IconShowcase/>
         <Footer />
     </div>
   );
