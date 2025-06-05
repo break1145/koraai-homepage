@@ -1,5 +1,8 @@
 Kora ai HomePage's improvement
 
+Use React + Tailwind + Framer-Motion
+
+
 run:
 ```bash
 git clone https://github.com/break1145/koraai-homepage.git
