@@ -51,7 +51,7 @@ const JobList = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-white py-16 px-4">
+    <div className="py-16 px-4" style={{ background: 'linear-gradient(to right, #f1f5f9, #C0CDF4)' }}>
       <div className="container mx-auto max-w-6xl">
         <div className="flex justify-between items-center mb-12">
           <motion.h2

@@ -63,7 +63,7 @@ const HireFeatures = () => {
   ]
 
   return (
-    <div className="py-20 px-4" style={{ background: 'linear-gradient(to bottom right, rgb(247,250,254), rgb(193,204,241))' }}>
+    <div className="py-20 px-4" style={{ background: 'linear-gradient(to right, #f7faff, #C0CDF4)' }}>
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

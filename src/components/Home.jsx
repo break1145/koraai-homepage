@@ -3,7 +3,7 @@ import ChatInterface from './ChatInterface'
 
 const Home = () => {
   return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white pt-4 pb-4 px-4 relative">
+      <div className="min-h-screen pt-4 pb-4 px-4 relative" style={{ background: 'linear-gradient(to right, #f8fafc, #C0CDF4)' }}>
         {/* Responsive Absolute Logo */}
 
 

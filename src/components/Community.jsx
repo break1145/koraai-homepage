@@ -41,7 +41,7 @@ const Community = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-white py-20 px-4">
+    <div className="py-20 px-4" style={{ background: 'linear-gradient(to right, #f8fafc, #C0CDF4)' }}>
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <motion.div

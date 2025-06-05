@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="w-full py-4 flex justify-center items-center">
+    <div className="w-full py-4 flex justify-center items-center" style={{ background: 'linear-gradient(to right, #f8fafc, #C0CDF4)' }}>
       <div 
         className="text-4xl font-bold"
         style={{
