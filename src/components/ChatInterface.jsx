@@ -33,7 +33,7 @@ const ChatInterface = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-6 max-w-md ml-auto overflow-hidden border border-white/20"
+          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-lg ml-auto overflow-hidden border border-white/20"
       >
         {/* 光泽反射特效 */}
         <div className="absolute inset-0 pointer-events-none">
@@ -42,13 +42,13 @@ const ChatInterface = () => {
           <div className="absolute top-1/3 left-[-20%] w-[140%] h-1 rotate-2 bg-gradient-to-r from-white/10 via-white/50 to-white/10 blur-md opacity-40 animate-move" />
         </div>
 
-        <div className="relative space-y-6 z-10">
+        <div className="relative space-y-8 z-10">
           {messages.map((message, index) => (
               <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
+                  transition={{ delay: index * 0.8 }}
                   className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : ''}`}
               >
                 {message.type === 'kora' && (
@@ -76,7 +76,13 @@ const ChatInterface = () => {
                   {message.progress && (
                       <div className="space-y-2 mt-4">
                         {message.progress.map((item, i) => (
-                            <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                            <motion.div 
+                                key={i} 
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: (index * 0.5) + 0.8 + (i * 0.3) }}
+                                className="flex items-center gap-2 text-sm text-gray-700"
+                            >
                               {item.done ? (
                                   <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
@@ -88,7 +94,7 @@ const ChatInterface = () => {
                               {item.count && (
                                   <span className="text-blue-400 ml-auto font-mono">{item.count}</span>
                               )}
-                            </div>
+                            </motion.div>
                         ))}
                       </div>
                   )}
