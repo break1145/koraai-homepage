@@ -1,3 +1,19 @@
+Kora ai HomePage's improvement
+
+run:
+```bash
+git clone https://github.com/break1145/koraai-homepage.git
+cd koraai-homepage
+
+npm install
+npm run dev
+```
+ See `localhost:5173`
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
