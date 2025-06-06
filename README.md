@@ -26,7 +26,7 @@ npm run build
 npm install -g pm2
 pm2 start npm --name koraai-homepage -- run preview
 ```
-See 'server-ip:5173'
+See `server-ip:5173`
 
 
 ![image](https://github.com/user-attachments/assets/9bb25277-07a0-49f6-9de8-d6647a89636e)
