@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import CommunityTitle from './CommunityTitle'
-import CommunityFeaturesList from './CommunityFeaturesList'
-import CommunityVisualization from './CommunityVisualization'
-import { ANIMATION_CONFIG, STYLES } from '../constants/communityConfig'
+import CommunityTitle from '../components/CommunityTitle.jsx'
+import CommunityFeaturesList from '../components/CommunityFeaturesList.jsx'
+import CommunityVisualization from '../components/CommunityVisualization.jsx'
+import { ANIMATION_CONFIG, STYLES } from '../constants/communityConfig.js'
 
 const Community = () => {
   return (
