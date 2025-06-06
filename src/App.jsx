@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion'
-import Home from './components/Home'
+import Home from './views/Home.jsx'
 import AiJob from './components/AiJob.jsx'
 import Community from './components/Community.jsx'
 import HireFeatures from './components/HireFeatures.jsx'
