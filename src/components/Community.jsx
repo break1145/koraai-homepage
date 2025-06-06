@@ -114,7 +114,7 @@ const Community = () => {
                 <div className="relative w-full max-w-[500px] aspect-square">
                     <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                       <CircularText
-                        text="HUMAN DATA HUMAN DATA "
+                        text="AI-NATIVE TALENT COMMUNITY "
                         onHover="speedUp"
                         spinDuration={20}
                         textClassName="bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text font-bold"
