@@ -1,5 +1,16 @@
 import { motion } from 'framer-motion'
 
+const shineAnimation = {
+  '@keyframes shine': {
+    '0%': {
+      transform: 'translateX(-100%) skewX(-12deg)'
+    },
+    '100%': {
+      transform: 'translateX(200%) skewX(-12deg)'
+    }
+  }
+}
+
 const JobList = () => {
   const jobs = [
     {
@@ -51,7 +62,14 @@ const JobList = () => {
   ]
 
   return (
-    <div className="py-16 px-4" style={{ background: 'linear-gradient(to right, #f1f5f9, #C0CDF4)' }}>
+    <div
+      className="py-16 px-4"
+      style={{
+        background: 'linear-gradient(to right, #f1f5f9, #C0CDF4)',
+        animation: 'shine 2s infinite'
+      }}
+    >
+      
       <div className="container mx-auto max-w-6xl">
         <div className="flex justify-between items-center mb-12">
           <motion.h2
@@ -64,18 +82,39 @@ const JobList = () => {
           </motion.h2>
           <div className="flex gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(26, 67, 233, 0.4)"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-500 text-white px-6 py-2 rounded-full font-medium"
+              className="relative overflow-hidden text-white px-6 py-2 rounded-lg font-medium shadow-lg transition-all duration-300 hover:shadow-xl"
+              style={{
+                background: 'linear-gradient(135deg, #1a43e9 0%, #1e46eb 50%, #1640d6 100%)'
+              }}
             >
-              Apply for Work
+              <div 
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 -translate-x-full"
+                style={{
+                  animation: 'shine 2s infinite'
+                }}
+              />
+              <span className="relative z-10">Apply for Work</span>
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(26, 67, 233, 0.3)"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-100 text-blue-500 px-6 py-2 rounded-full font-medium"
+              className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-blue-800 px-6 py-2 rounded-lg font-medium border border-blue-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-blue-300"
             >
-              Talent Onboarding Guide
+              <div 
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-30 transform -skew-x-12 -translate-x-full"
+                style={{
+                  animation: 'shine 2.5s infinite'
+                }}
+              />
+              <span className="relative z-10">Talent Onboarding Guide</span>
             </motion.button>
           </div>
         </div>
