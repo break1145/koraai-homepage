@@ -39,7 +39,7 @@ const HumanData = () => {
 
   return (
     <div className="py-20 px-4" style={{ background: 'linear-gradient(to right, #f7faff, #C0CDF4)' }}>
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl pl-8">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ">
             <motion.div

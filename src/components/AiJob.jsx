@@ -33,7 +33,7 @@ const AiJob = () => {
   ]
 
   return (
-    <div className="" style={{ background: 'linear-gradient(to right, #f1f5f9, #C0CDF4)' }}>
+    <div className="pt-16" style={{ background: 'linear-gradient(to right, #f1f5f9, #C0CDF4)' }}>
       <div className="container ml-0 max-w-5xl pl-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
