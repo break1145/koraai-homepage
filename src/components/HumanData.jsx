@@ -5,14 +5,12 @@ import CircularText from '../blocks/TextAnimations/CircularText/CircularText.jsx
 import PixelCard from '../blocks/Components/PixelCard/PixelCard.jsx';
 import CardSwap, { Card } from '../blocks/Components/CardSwap/CardSwap.jsx'
 
-
 const FeatureItem = ({ icon, text }) => (
   <div className="flex items-start space-x-3 mb-6">
     <div className="text-blue-600 w-6 h-6 mt-1">{icon}</div>
     <p className="text-gray-600 text-lg">{text}</p>
   </div>
 )
-
 
 const HumanData = () => {
   const features = [
@@ -43,77 +41,85 @@ const HumanData = () => {
   ]
 
   return (
-    <div className="py-20 px-4" style={{ background: 'linear-gradient(to right, #f7faff, #C0CDF4)' }}>
-      <div className="container mx-auto max-w-7xl pl-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h2 className="text-5xl font-bold mb-6 text-left">
-                    Human Data That Actually{' '}
-                    <span className="text-blue-600 text-left">Improves AI</span>
-                  </h2>
+    <div className="py-12 md:py-20 px-4" style={{ background: 'linear-gradient(to right, #f7faff, #C0CDF4)' }}>
+      <div className="container mx-auto max-w-7xl px-4 md:pl-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* 左侧内容区域 */}
+          <div className="w-full lg:w-1/2 lg:pr-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center lg:text-left">
+                Human Data That Actually{' '}
+                <span className="text-blue-600">Improves AI</span>
+              </h2>
 
-                  <p className="text-gray-600 text-base mb-8 text-left">
+              <p className="text-gray-600 text-sm md:text-base mb-8 text-center lg:text-left leading-relaxed">
+                The most impactful AI systems aren't just trained on code or content-
+                <br className="hidden md:block" />
+                but on how real people reason, decide, and solve problems.
+                <br className="hidden md:block" />
+                Kora specializes in Human Data — to help AI learn from how great
+                people work
+              </p>
+
+              <h3 className="text-blue-600 text-xl md:text-2xl font-semibold mb-6 text-center lg:text-left">Why Human Data?</h3>
+
+              <div className="space-y-4">
+                {features.map((feature, index) => (
+                  <FeatureItem key={index} {...feature} />
+                ))}
+              </div>
+            </motion.div>
+          </div>
+          
+          {/* 右侧CardSwap区域 */}
+          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end">
+            <div className="w-full max-w-sm lg:max-w-none" style={{ 
+              height: window.innerWidth < 768 ? '400px' : '500px',
+              position: 'relative'
+            }}>
+              <CardSwap
+                width={window.innerWidth < 768 ? 280 : window.innerWidth < 1024 ? 320 : 400}
+                height={window.innerWidth < 768 ? 350 : window.innerWidth < 1024 ? 400 : 450}
+                cardDistance={window.innerWidth < 768 ? 40 : 60}
+                verticalDistance={window.innerWidth < 768 ? 50 : 70}
+                delay={3000}
+                pauseOnHover={true}
+              >
+                <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
+                    Human Data
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
                     The most impactful AI systems aren't just trained on code or content-
-                    <br />
                     but on how real people reason, decide, and solve problems.
-                    <br />
-                    Kora specializes in Human Data — to help AI learn from how great
-                    people work
+                    Kora specializes in Human Data — to help AI learn from how great people work
                   </p>
-
-                  <h3 className="text-blue-600 text-2xl font-semibold mb-6 text-left">Why Human Data?</h3>
-
-                  {features.map((feature, index) => (
-                    <FeatureItem key={index} {...feature} />
-                  ))}
-                </motion.div>
+                </Card>
+                <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 bg-clip-text text-transparent mb-2">
+                    AI Training Excellence
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
+                    Our platform provides comprehensive AI training solutions that go beyond traditional approaches, 
+                    focusing on real-world applications and human-centered design principles.
+                  </p>
+                </Card>
+                <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent mb-2">
+                    Future of Work
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
+                    Discover how human expertise and AI capabilities combine to create 
+                    unprecedented opportunities in the evolving landscape of digital work.
+                  </p>
+                </Card>
+              </CardSwap>
             </div>
-            <div style={{ width: '40%', height: '50%', position: 'relative' }}>
-                <div style={{ height: '500px', position: 'relative' }}>
-                    <CardSwap
-                        cardDistance={60}
-                        verticalDistance={70}
-                        delay={3000}
-                        pauseOnHover={true}
-                    >
-                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
-                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
-                                Human Data
-                            </h3>
-                            <p className="text-gray-500 text-sm">
-                                The most impactful AI systems aren't just trained on code or content-
-                                but on how real people reason, decide, and solve problems.
-                                Kora specializes in Human Data — to help AI learn from how great people work
-                            </p>
-                        </Card>
-                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
-                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
-                                Not Only Human Data
-                            </h3>
-                            <p className="text-gray-500 text-sm">
-                                some useful content
-                            </p>
-                        </Card>
-                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
-                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
-                                More About Human Data
-                            </h3>
-                            <p className="text-gray-500 text-sm">
-                                some useful content
-                            </p>
-                        </Card>
-                    </CardSwap>
-                </div>
-            </div>
-
-
-
-
+          </div>
         </div>
       </div>
     </div>
