@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
       {/* 主要内容 */}
-      <div className="relative z-10 flex flex-col lg:flex-row gap-6 items-start pl-8">
+      <div className="relative z-10 flex flex-col lg:flex-row gap-6 items-start pt-28 pl-12">
         {/* 左侧内容 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
