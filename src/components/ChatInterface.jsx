@@ -33,7 +33,7 @@ const ChatInterface = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-lg ml-auto overflow-hidden"
+          className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 ml-auto overflow-hidden"
       >
         {/* 光泽反射特效 */}
         <div className="absolute inset-0 pointer-events-none">
@@ -52,8 +52,8 @@ const ChatInterface = () => {
                   className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : ''}`}
               >
                 {message.type === 'kora' && (
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-200 to-blue-400 text-white rounded-full flex items-center justify-center font-bold shadow-inner">
-                      K
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-200 to-blue-400 text-white text-xs rounded-full flex items-center justify-center shadow-inner">
+                      Kora
                     </div>
                 )}
                 <div

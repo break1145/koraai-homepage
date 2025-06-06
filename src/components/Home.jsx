@@ -3,19 +3,19 @@ import ChatInterface from './ChatInterface'
 
 const Home = () => {
   return (
-      <div className="min-h-screen pt-4 pb-4 px-4 relative" style={{ background: 'linear-gradient(to right, #f8fafc, #C0CDF4)' }}>
+      <div className="min-h-screen pb-4 px-4 relative" style={{ background: 'linear-gradient(to right, #f8fafc, #C0CDF4)' }}>
         {/* Responsive Absolute Logo */}
 
 
         {/* Main Content */}
 
-        <div className="container mx-auto flex flex-col lg:flex-row gap-8 items-center mt-12">
+        <div className="flex flex-col lg:flex-row gap-8 items-start pl-8">
           {/* Left Side Content */}
           <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex-1 p-8 lg:p-20 rounded-2xl backdrop-blur-sm bg-white/10"
+              className="flex-1 lg:max-w-2xl p-8 lg:p-20 rounded-2xl backdrop-blur-sm bg-white/10"
           >
             {/* Title */}
             <motion.div
@@ -30,7 +30,7 @@ const Home = () => {
             </motion.div>
 
             {/* Content */} 
-            <h2 className="text-3xl lg:text-4xl sm:text-7xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-3xl lg:text-6xl sm:text-6xl font-bold text-gray-900 mb-4 leading-tight">
               Smarter Teams.
               <br />
               Smarter Work.
@@ -48,14 +48,14 @@ const Home = () => {
               <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#0066FF] text-white px-6 py-3 rounded-full font-semibold"
+                  className="bg-[#0066FF] text-white text-xs px-6 py-3 rounded-full font-semibold"
               >
                 Join as Talent
               </motion.button>
               <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#0066FF]/10 text-[#0066FF] px-6 py-3 rounded-full font-semibold flex items-center justify-center"
+                  className="bg-[#0066FF]/10 text-[#0066FF] text-xs px-6 py-3 rounded-full font-semibold flex items-center justify-center"
               >
                 Find Experts
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
@@ -66,8 +66,8 @@ const Home = () => {
           </motion.div>
 
           {/* Chat Interface */}
-          <div className="flex justify-center lg:justify-end w-full lg:w-auto">
-            <div className="rounded-2xl backdrop-blur-sm bg-white/10 p-4">
+          <div className="flex justify-center lg:justify-end w-full lg:w-[40%]">
+            <div className="rounded-2xl backdrop-blur-sm bg-white/10 p-4 w-full">
               <ChatInterface />
             </div>
           </div>
