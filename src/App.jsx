@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion'
 import Home from './views/Home.jsx'
-import AiJob from './components/AiJob.jsx'
+import AiJob from './views/AiJob.jsx'
 import Community from './components/Community.jsx'
 import HireFeatures from './components/HireFeatures.jsx'
 import HumanData from './components/HumanData.jsx'
