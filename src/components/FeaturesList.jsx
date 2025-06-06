@@ -1,18 +1,21 @@
-import { motion } from 'framer-motion'
+import React from 'react'
+import { useFeatures } from '../hooks/useFeatures'
 import FeatureItem from './FeatureItem'
-import { FEATURES_DATA, ANIMATION_CONFIG } from '../constants/aiJobConfig'
 
 const FeaturesList = () => {
+  const { features, featuresCount } = useFeatures()
+
   return (
-    <motion.div {...ANIMATION_CONFIG.featuresFadeIn} className="space-y-6">
-      {FEATURES_DATA.map((feature, index) => (
+    <div className="space-y-6">
+      <p className="text-sm text-gray-500">共 {featuresCount} 个特性</p>
+      {features.map((feature, index) => (
         <FeatureItem 
           key={feature.id} 
           feature={feature} 
           index={index} 
         />
       ))}
-    </motion.div>
+    </div>
   )
 }
 
