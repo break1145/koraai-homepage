@@ -4,9 +4,9 @@ import Home from './views/Home.jsx'
 import AiJob from './views/AiJob.jsx'
 import Community from './views/Community.jsx'
 import HireFeatures from './views/HireFeatures.jsx'
-import HumanData from './components/HumanData.jsx'
-import IconShowcase from './components/IconShowcase.jsx'
-import Footer from './components/Footer'
+import HumanData from './views/HumanData.jsx'
+import IconShowcase from './views/IconShowcase.jsx'
+import Footer from './views/Footer.jsx'
 
 import './App.css'
 
