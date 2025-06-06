@@ -2,6 +2,9 @@ import { motion } from 'framer-motion'
 import MagnetLines from '../blocks/Animations/MagnetLines/MagnetLines.jsx';
 import Orb from '../blocks/Backgrounds/Orb/Orb.jsx';
 import CircularText from '../blocks/TextAnimations/CircularText/CircularText.jsx';
+import PixelCard from '../blocks/Components/PixelCard/PixelCard.jsx';
+import CardSwap, { Card } from '../blocks/Components/CardSwap/CardSwap.jsx'
+
 
 const FeatureItem = ({ icon, text }) => (
   <div className="flex items-start space-x-3 mb-6">
@@ -70,14 +73,47 @@ const HumanData = () => {
                   ))}
                 </motion.div>
             </div>
-            <div style={{ width: '50%', height: '600px', position: 'relative' }}>
-                <Orb
-                    hoverIntensity={0.5}
-                    rotateOnHover={true}
-                    hue={0}
-                    forceHoverState={false}
-                />
+            <div style={{ width: '40%', height: '50%', position: 'relative' }}>
+                <div style={{ height: '500px', position: 'relative' }}>
+                    <CardSwap
+                        cardDistance={60}
+                        verticalDistance={70}
+                        delay={3000}
+                        pauseOnHover={true}
+                    >
+                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
+                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
+                                Human Data
+                            </h3>
+                            <p className="text-gray-500 text-sm">
+                                The most impactful AI systems aren't just trained on code or content-
+                                but on how real people reason, decide, and solve problems.
+                                Kora specializes in Human Data — to help AI learn from how great people work
+                            </p>
+                        </Card>
+                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
+                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
+                                Not Only Human Data
+                            </h3>
+                            <p className="text-gray-500 text-sm">
+                                some useful content
+                            </p>
+                        </Card>
+                        <Card className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6">
+                            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2">
+                                More About Human Data
+                            </h3>
+                            <p className="text-gray-500 text-sm">
+                                some useful content
+                            </p>
+                        </Card>
+                    </CardSwap>
+                </div>
             </div>
+
+
+
+
         </div>
       </div>
     </div>
