@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import MagnetLines from '../blocks/Animations/MagnetLines/MagnetLines.jsx';
+import Orb from '../blocks/Backgrounds/Orb/Orb.jsx';
+import CircularText from '../blocks/TextAnimations/CircularText/CircularText.jsx';
 
 const FeatureItem = ({ icon, text }) => (
   <div className="flex items-start space-x-3 mb-6">
@@ -7,7 +10,6 @@ const FeatureItem = ({ icon, text }) => (
   </div>
 )
 
-import DotCloud from './DotCloud'
 
 const HumanData = () => {
   const features = [
@@ -41,44 +43,41 @@ const HumanData = () => {
     <div className="py-20 px-4" style={{ background: 'linear-gradient(to right, #f7faff, #C0CDF4)' }}>
       <div className="container mx-auto max-w-7xl pl-8">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-5xl font-bold mb-6 text-left">
-                Human Data That Actually{' '}
-                <span className="text-blue-600 text-left">Improves AI</span>
-              </h2>
+            <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="text-5xl font-bold mb-6 text-left">
+                    Human Data That Actually{' '}
+                    <span className="text-blue-600 text-left">Improves AI</span>
+                  </h2>
 
-              <p className="text-gray-600 text-base mb-8 text-left">
-                The most impactful AI systems aren't just trained on code or content-
-                <br />
-                but on how real people reason, decide, and solve problems.
-                <br />
-                Kora specializes in Human Data — to help AI learn from how great
-                people work
-              </p>
+                  <p className="text-gray-600 text-base mb-8 text-left">
+                    The most impactful AI systems aren't just trained on code or content-
+                    <br />
+                    but on how real people reason, decide, and solve problems.
+                    <br />
+                    Kora specializes in Human Data — to help AI learn from how great
+                    people work
+                  </p>
 
-              <h3 className="text-blue-600 text-2xl font-semibold mb-6 text-left">Why Human Data?</h3>
+                  <h3 className="text-blue-600 text-2xl font-semibold mb-6 text-left">Why Human Data?</h3>
 
-              {features.map((feature, index) => (
-                <FeatureItem key={index} {...feature} />
-              ))}
-            </motion.div>
-          </div>
-
-          {/* 右侧更新为新的散点图组件 */}
-          <div className="lg:w-1/2 relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <DotCloud />
-            </motion.div>
-          </div>
+                  {features.map((feature, index) => (
+                    <FeatureItem key={index} {...feature} />
+                  ))}
+                </motion.div>
+            </div>
+            <div style={{ width: '50%', height: '600px', position: 'relative' }}>
+                <Orb
+                    hoverIntensity={0.5}
+                    rotateOnHover={true}
+                    hue={0}
+                    forceHoverState={false}
+                />
+            </div>
         </div>
       </div>
     </div>
